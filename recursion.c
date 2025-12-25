@@ -7,7 +7,7 @@ int getSum(int n)
 {
     if (n == 1)
         return 1ll;
-    return (int)n + getSum(n - 1);
+    return n + getSum(n - 1);
 }
 
 int main()
