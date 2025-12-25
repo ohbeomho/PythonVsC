@@ -3,11 +3,11 @@
 
 #define ll long long
 
-ll getSum(int n)
+int getSum(int n)
 {
     if (n == 1)
         return 1ll;
-    return (ll)n + getSum(n - 1);
+    return (int)n + getSum(n - 1);
 }
 
 int main()
@@ -19,7 +19,7 @@ int main()
     for (int i = 0; i < 10; i++)
     {
         timespec_get(&start, TIME_UTC);
-        ll result = getSum(10000);
+        int result = getSum(10000);
         timespec_get(&end, TIME_UTC);
 
         ll elapsed_ns = (ll)(end.tv_sec - start.tv_sec) * 1000000000ll +
